@@ -1,0 +1,3 @@
+/media/anhv/data/projects/lab_transformer/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/media/anhv/data/projects/lab_transformer/cmake-build-debug/CMakeFiles/edit_cache.dir
+/media/anhv/data/projects/lab_transformer/cmake-build-debug/CMakeFiles/lab_transformer.dir
