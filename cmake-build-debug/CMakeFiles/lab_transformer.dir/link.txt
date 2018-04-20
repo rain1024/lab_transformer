@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/lab_transformer.dir/main.cpp.o CMakeFiles/lab_transformer.dir/transformer.cpp.o CMakeFiles/lab_transformer.dir/FeatureTemplate.cpp.o  -o lab_transformer 

@@ -51,27 +51,3 @@ int main() {
     std::cout << float(clock() - begin_time) / CLOCKS_PER_SEC;
     return 0;
 }
-
-//
-// Created by anhv on 19/04/2018.
-//
-//
-//#include <map>
-//#include <string>
-//#include <iostream>
-//#include <boost/xpressive/xpressive.hpp>
-//#include <boost/xpressive/regex_actions.hpp>
-//using namespace boost::xpressive;
-//
-//int main()
-//{
-//    std::map<std::string, std::string> env;
-//    env["X"] = "this";
-//    env["Y"] = "that";
-//
-//    std::string input("\"$(X)\" has the value \"$(Y)\"");
-//
-//    sregex envar = "$(" >> (s1 = +_w) >> ')';
-//    std::string output = regex_replace(input, envar, boost::xpressive::ref(env)[s1]);
-//    std::cout << output << std::endl;
-//}

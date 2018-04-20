@@ -22,6 +22,11 @@ vector<vector<vector<string>>> transformer(
 
 class TaggedTransformer {
     vector<FeatureTemplate> features;
+private:
+    vector<string> sentence2features(vector<vector<string>>);
+    string word2features(vector<string>);
+    vector<string> template2features(vector<string>, FeatureTemplate);
+
 public:
     TaggedTransformer(vector<string>);
     vector<vector<vector<string>>> transform(vector<vector<vector<string>>>);

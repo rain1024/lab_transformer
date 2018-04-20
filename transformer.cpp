@@ -5,39 +5,37 @@
 #include "transformer.h"
 
 
-
-string word2feature(vector<string> tokens, vector<FeatureTemplate>){
-    return "";
-}
-
-string sentences2feature(vector<vector<string>> sentence,
-                         vector<FeatureTemplate> feature_tempaltes){
-    return "";
-}
-
-vector<vector<vector<string>>> transformer(
-        vector<vector<vector<string>>> sentences,
-        vector<string> features){
-
-    vector<FeatureTemplate> feature_templates;
-    for(auto feature: features){
-        FeatureTemplate feature_template = FeatureTemplate(feature);
-        feature_templates.push_back(feature_template);
-    }
-    vector<string> output;
-    for(auto sentence: sentences){
-        output.push_back(sentences2feature(sentence, feature_templates));
-    }
-    cout << 0;
-    return {{{"a"}}};
-}
-
 TaggedTransformer::TaggedTransformer(vector<string> features) {
-    for(auto feature: features){
+    for (auto feature: features) {
         this->features.push_back(FeatureTemplate(feature));
     }
 }
 
-vector<vector<vector<string>>> TaggedTransformer::transform(vector<vector<vector<string>>>) {
+vector<vector<vector<string>>> TaggedTransformer::transform(vector<vector<vector<string>>> sentences) {
+    vector<vector<string>> output;
+    for (auto sentence: sentences) {
+        output.push_back(this->sentence2features(sentence));
+    }
+    cout << 0;
     return vector<vector<vector<string>>>();
+}
+
+vector<string> TaggedTransformer::sentence2features(vector<vector<string>> sentence) {
+    vector<string> output;
+    for(auto word: sentence){
+        output.push_back(this->word2features(word));
+    }
+    return output;
+}
+
+string TaggedTransformer::word2features(vector<string> word) {
+    vector<vector<string>> output;
+    for(auto feature: this->features){
+        output.push_back(this->template2features(word, feature));
+    }
+    return std::string();
+}
+
+vector<string> TaggedTransformer::template2features(vector<string> tokens, FeatureTemplate feature) {
+    return vector<string>();
 }

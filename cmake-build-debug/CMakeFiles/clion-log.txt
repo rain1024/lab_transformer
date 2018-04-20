@@ -1,4 +1,0 @@
-/home/anhv/Downloads/clion-2018.1.1/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /media/anhv/data/projects/lab_transformer
--- Configuring done
--- Generating done
--- Build files have been written to: /media/anhv/data/projects/lab_transformer/cmake-build-debug
