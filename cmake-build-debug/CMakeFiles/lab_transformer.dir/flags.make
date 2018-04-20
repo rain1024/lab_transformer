@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_FLAGS = -g   -std=gnu++11
 
-CXX_DEFINES = 
+CXX_DEFINES = -D_GLIBCXX_USE_CXX11_ABI=0
 
 CXX_INCLUDES = 
 

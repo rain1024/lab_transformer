@@ -6,6 +6,20 @@
 
 #IncludeRegexTransform: 
 
+/media/anhv/data/projects/lab_transformer/FeatureTemplate.cpp
+FeatureTemplate.h
+/media/anhv/data/projects/lab_transformer/FeatureTemplate.h
+
+/media/anhv/data/projects/lab_transformer/FeatureTemplate.h
+iostream
+-
+string
+-
+boost/xpressive/xpressive.hpp
+-
+boost/xpressive/regex_actions.hpp
+-
+
 /media/anhv/data/projects/lab_transformer/main.cpp
 iostream
 -
@@ -25,10 +39,14 @@ transformer.h
 /media/anhv/data/projects/lab_transformer/transformer.h
 
 /media/anhv/data/projects/lab_transformer/transformer.h
+boost/algorithm/string.hpp
+-
 string
 -
 vector
 -
-regex
+iostream
 -
+FeatureTemplate.h
+/media/anhv/data/projects/lab_transformer/FeatureTemplate.h
 

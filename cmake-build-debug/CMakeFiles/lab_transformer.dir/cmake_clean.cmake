@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/lab_transformer.dir/main.cpp.o"
   "CMakeFiles/lab_transformer.dir/transformer.cpp.o"
+  "CMakeFiles/lab_transformer.dir/FeatureTemplate.cpp.o"
   "lab_transformer.pdb"
   "lab_transformer"
 )

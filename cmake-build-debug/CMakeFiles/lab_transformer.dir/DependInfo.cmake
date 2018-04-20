@@ -4,10 +4,16 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/media/anhv/data/projects/lab_transformer/FeatureTemplate.cpp" "/media/anhv/data/projects/lab_transformer/cmake-build-debug/CMakeFiles/lab_transformer.dir/FeatureTemplate.cpp.o"
   "/media/anhv/data/projects/lab_transformer/main.cpp" "/media/anhv/data/projects/lab_transformer/cmake-build-debug/CMakeFiles/lab_transformer.dir/main.cpp.o"
   "/media/anhv/data/projects/lab_transformer/transformer.cpp" "/media/anhv/data/projects/lab_transformer/cmake-build-debug/CMakeFiles/lab_transformer.dir/transformer.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
+
+# Preprocessor definitions for this target.
+set(CMAKE_TARGET_DEFINITIONS_CXX
+  "_GLIBCXX_USE_CXX11_ABI=0"
+  )
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

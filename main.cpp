@@ -1,4 +1,4 @@
-using namespace std;
+//using namespace std;
 
 #include <iostream>
 #include <vector>
@@ -25,15 +25,53 @@ int main() {
             boost::algorithm::split(tokens, line, boost::is_any_of("\t"));
             sentence.push_back(tokens);
         }
-
     }
     int n = 10000;
     sentences.resize(n);
     vector<string> features = {
-            "T[-2]", "T[-1]", "T[0]", "T[1]", "T[2]"
+        "T[-2].lower", "T[-1].lower", "T[0].lower", "T[1].lower", "T[2].lower",
+        "T[-1].isdigit", "T[0].isdigit", "T[1].isdigit",
+        "T[-1].istitle", "T[0].istitle", "T[1].istitle",
+        "T[0,1].istitle", "T[0,2].istitle",
+        "T[-2].is_in_dict", "T[-1].is_in_dict", "T[0].is_in_dict", "T[1].is_in_dict", "T[2].is_in_dict",
+        "T[-2,-1].is_in_dict", "T[-1,0].is_in_dict", "T[0,1].is_in_dict", "T[1,2].is_in_dict",
+        "T[-2,0].is_in_dict", "T[-1,1].is_in_dict", "T[0,2].is_in_dict",
+
+        //  word unigram and bigram and trigram
+        "T[-2]", "T[-1]", "T[0]", "T[1]", "T[2]",
+        "T[-2,-1]", "T[-1,0]", "T[0,1]", "T[1,2]",
+        "T[-2,0]", "T[-1,1]", "T[0,2]",
+
+        // BI tag
+        "T[-2][1]", "T[-1][1]"
     };
     const clock_t begin_time = clock();
-    transformer(sentences, features);
+    TaggedTransformer tagged_transformer = TaggedTransformer(features);
+    tagged_transformer.transform(sentences);
     std::cout << float(clock() - begin_time) / CLOCKS_PER_SEC;
     return 0;
 }
+
+//
+// Created by anhv on 19/04/2018.
+//
+//
+//#include <map>
+//#include <string>
+//#include <iostream>
+//#include <boost/xpressive/xpressive.hpp>
+//#include <boost/xpressive/regex_actions.hpp>
+//using namespace boost::xpressive;
+//
+//int main()
+//{
+//    std::map<std::string, std::string> env;
+//    env["X"] = "this";
+//    env["Y"] = "that";
+//
+//    std::string input("\"$(X)\" has the value \"$(Y)\"");
+//
+//    sregex envar = "$(" >> (s1 = +_w) >> ')';
+//    std::string output = regex_replace(input, envar, boost::xpressive::ref(env)[s1]);
+//    std::cout << output << std::endl;
+//}

@@ -123,6 +123,33 @@ lab_transformer/fast:
 	$(MAKE) -f CMakeFiles/lab_transformer.dir/build.make CMakeFiles/lab_transformer.dir/build
 .PHONY : lab_transformer/fast
 
+FeatureTemplate.o: FeatureTemplate.cpp.o
+
+.PHONY : FeatureTemplate.o
+
+# target to build an object file
+FeatureTemplate.cpp.o:
+	$(MAKE) -f CMakeFiles/lab_transformer.dir/build.make CMakeFiles/lab_transformer.dir/FeatureTemplate.cpp.o
+.PHONY : FeatureTemplate.cpp.o
+
+FeatureTemplate.i: FeatureTemplate.cpp.i
+
+.PHONY : FeatureTemplate.i
+
+# target to preprocess a source file
+FeatureTemplate.cpp.i:
+	$(MAKE) -f CMakeFiles/lab_transformer.dir/build.make CMakeFiles/lab_transformer.dir/FeatureTemplate.cpp.i
+.PHONY : FeatureTemplate.cpp.i
+
+FeatureTemplate.s: FeatureTemplate.cpp.s
+
+.PHONY : FeatureTemplate.s
+
+# target to generate assembly for a file
+FeatureTemplate.cpp.s:
+	$(MAKE) -f CMakeFiles/lab_transformer.dir/build.make CMakeFiles/lab_transformer.dir/FeatureTemplate.cpp.s
+.PHONY : FeatureTemplate.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -186,6 +213,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... lab_transformer"
+	@echo "... FeatureTemplate.o"
+	@echo "... FeatureTemplate.i"
+	@echo "... FeatureTemplate.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -44,6 +44,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add option="-D_GLIBCXX_USE_CXX11_ABI=0"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -67,6 +68,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add option="-D_GLIBCXX_USE_CXX11_ABI=0"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -84,6 +86,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/media/anhv/data/projects/lab_transformer/FeatureTemplate.cpp">
+			<Option target="lab_transformer"/>
+		</Unit>
+		<Unit filename="/media/anhv/data/projects/lab_transformer/FeatureTemplate.h">
+			<Option target="lab_transformer"/>
+		</Unit>
 		<Unit filename="/media/anhv/data/projects/lab_transformer/main.cpp">
 			<Option target="lab_transformer"/>
 		</Unit>
